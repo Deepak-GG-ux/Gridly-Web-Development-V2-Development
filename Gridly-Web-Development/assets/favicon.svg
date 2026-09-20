@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Gridly">
+  <rect width="32" height="32" rx="7" fill="#12141A"/>
+  <g fill="#FFFFFF" fill-opacity=".62">
+    <rect x="7" y="7" width="7.5" height="7.5" rx="1.5"/>
+    <rect x="17.5" y="7" width="7.5" height="7.5" rx="1.5"/>
+    <rect x="7" y="17.5" width="7.5" height="7.5" rx="1.5"/>
+  </g>
+  <rect x="17.5" y="17.5" width="7.5" height="7.5" rx="1.5" fill="#2743F0"/>
+</svg>

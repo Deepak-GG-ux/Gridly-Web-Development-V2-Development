@@ -1,0 +1,187 @@
+/* ==========================================================================
+   GRIDLY — Design tokens
+   Single source of truth for colour, type, spacing, radius, shadow, motion.
+   Semantic tokens (--bg, --fg, --border...) are re-mapped in three scopes:
+     :root              → light theme
+     [data-theme=dark]  → dark theme
+     .is-night          → dark panel inside a light page
+   Components only ever read the semantic tokens, never the raw palette.
+   ========================================================================== */
+
+:root {
+  /* --- Raw palette ------------------------------------------------------ */
+  --c-paper:        #f1f2f4;
+  --c-white:        #ffffff;
+  --c-mist:         #f7f8fa;
+  --c-ink:          #12141a;
+  --c-ink-2:        #3a3f4b;
+  --c-ink-3:        #6b7280;
+  --c-line:         #dfe2e8;
+  --c-line-strong:  #c8ccd6;
+
+  --c-accent:       #2743f0;
+  --c-accent-hover: #1a33d6;
+  --c-accent-soft:  #e7eafe;
+  --c-accent-line:  #b9c2fb;
+
+  --c-night:        #0b0d12;
+  --c-night-2:      #12151d;
+  --c-night-3:      #191d27;
+  --c-night-line:   #242939;
+  --c-night-fg:     #eef0f6;
+  --c-night-fg-2:   #c2c7d6;
+  --c-night-fg-3:   #8f97ab;
+  --c-night-accent: #7d90ff;
+
+  --c-ok:           #1e8e62;
+  --c-ok-soft:      #e4f4ed;
+  --c-warn:         #b26a00;
+  --c-warn-soft:    #fdf0dc;
+  --c-err:          #c4362f;
+  --c-err-soft:     #fcebe9;
+
+  /* --- Semantic: light theme ------------------------------------------- */
+  --bg:             var(--c-paper);
+  --bg-alt:         var(--c-mist);
+  --card:           var(--c-white);
+  --card-alt:       var(--c-mist);
+  --fg:             var(--c-ink);
+  --fg-2:           var(--c-ink-2);
+  --fg-muted:       var(--c-ink-3);
+  --border:         var(--c-line);
+  --border-strong:  var(--c-line-strong);
+  --accent:         var(--c-accent);
+  --accent-hover:   var(--c-accent-hover);
+  --accent-soft:    var(--c-accent-soft);
+  --accent-line:    var(--c-accent-line);
+  --on-accent:      #ffffff;
+  --grid-line:      rgba(18, 20, 26, 0.06);
+  --overlay:        rgba(11, 13, 18, 0.55);
+
+  --ok: var(--c-ok);   --ok-soft: var(--c-ok-soft);
+  --warn: var(--c-warn); --warn-soft: var(--c-warn-soft);
+  --err: var(--c-err); --err-soft: var(--c-err-soft);
+
+  /* --- Typography ------------------------------------------------------- */
+  --font-display: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --fs-hero:  clamp(2.6rem, 7.2vw, 5.75rem);
+  --fs-h1:    clamp(2.15rem, 5vw, 3.9rem);
+  --fs-h2:    clamp(1.85rem, 3.6vw, 2.9rem);
+  --fs-h3:    clamp(1.25rem, 2vw, 1.5rem);
+  --fs-h4:    1.0625rem;
+  --fs-lead:  clamp(1.0625rem, 1.5vw, 1.25rem);
+  --fs-body:  1.0625rem;
+  --fs-sm:    0.9375rem;
+  --fs-xs:    0.8125rem;
+  --fs-mono:  0.75rem;
+
+  --lh-tight: 1.02;
+  --lh-head:  1.12;
+  --lh-body:  1.6;
+  --ls-tight: -0.035em;
+  --ls-head:  -0.02em;
+  --ls-mono:  0.08em;
+
+  /* --- Spacing (4px base) ---------------------------------------------- */
+  --s-1: 0.25rem; --s-2: 0.5rem;  --s-3: 0.75rem; --s-4: 1rem;
+  --s-5: 1.5rem;  --s-6: 2rem;    --s-7: 2.5rem;  --s-8: 3rem;
+  --s-9: 4rem;    --s-10: 5rem;   --s-11: 6.5rem; --s-12: 8rem;
+
+  --section-y: clamp(4rem, 8.5vw, 7.5rem);
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+  --container: 1280px;
+  --measure: 65ch;
+
+  /* --- Radius & shadow -------------------------------------------------- */
+  --r-xs: 4px;  --r-sm: 6px;  --r-md: 10px;  --r-lg: 16px;  --r-xl: 22px;
+  --r-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(18, 20, 26, 0.05);
+  --shadow-md: 0 6px 18px -6px rgba(18, 20, 26, 0.12);
+  --shadow-lg: 0 24px 60px -24px rgba(18, 20, 26, 0.28);
+  --shadow-accent: 0 10px 30px -12px rgba(39, 67, 240, 0.45);
+
+  /* --- Motion ----------------------------------------------------------- */
+  --dur-fast: 120ms;
+  --dur: 220ms;
+  --dur-slow: 420ms;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --z-nav: 100;
+  --z-drawer: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+
+  color-scheme: light;
+}
+
+/* --- Semantic: dark theme ------------------------------------------------ */
+[data-theme='dark'] {
+  --bg:            var(--c-night);
+  --bg-alt:        var(--c-night-2);
+  --card:          var(--c-night-2);
+  --card-alt:      var(--c-night-3);
+  --fg:            var(--c-night-fg);
+  --fg-2:          var(--c-night-fg-2);
+  --fg-muted:      var(--c-night-fg-3);
+  --border:        var(--c-night-line);
+  --border-strong: #333a4d;
+  --accent:        var(--c-night-accent);
+  --accent-hover:  #96a6ff;
+  --accent-soft:   rgba(125, 144, 255, 0.14);
+  --accent-line:   rgba(125, 144, 255, 0.4);
+  --on-accent:     #0b0d12;
+  --grid-line:     rgba(238, 240, 246, 0.07);
+  --overlay:       rgba(3, 4, 7, 0.72);
+
+  --ok: #4cc294;   --ok-soft: rgba(76, 194, 148, 0.14);
+  --warn: #e0a54a; --warn-soft: rgba(224, 165, 74, 0.14);
+  --err: #f0736a;  --err-soft: rgba(240, 115, 106, 0.14);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 18px -6px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 24px 60px -24px rgba(0, 0, 0, 0.8);
+  --shadow-accent: 0 10px 30px -12px rgba(125, 144, 255, 0.35);
+
+  color-scheme: dark;
+}
+
+/* --- Dark panel inside any theme ----------------------------------------
+   Lets a light page carry a near-black section without hard-coded colours. */
+.is-night {
+  --bg:            var(--c-night);
+  --bg-alt:        var(--c-night-2);
+  --card:          var(--c-night-2);
+  --card-alt:      var(--c-night-3);
+  --fg:            var(--c-night-fg);
+  --fg-2:          var(--c-night-fg-2);
+  --fg-muted:      var(--c-night-fg-3);
+  --border:        var(--c-night-line);
+  --border-strong: #333a4d;
+  --accent:        var(--c-night-accent);
+  --accent-hover:  #96a6ff;
+  --accent-soft:   rgba(125, 144, 255, 0.14);
+  --accent-line:   rgba(125, 144, 255, 0.4);
+  --on-accent:     #0b0d12;
+  --grid-line:     rgba(238, 240, 246, 0.07);
+  --shadow-md: 0 6px 18px -6px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 24px 60px -24px rgba(0, 0, 0, 0.8);
+
+  background: var(--bg);
+  color: var(--fg);
+  color-scheme: dark;
+}
+
+/* Reduced motion: neutralise durations globally. Individual components also
+   check the media query so transforms can be removed, not just shortened. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 1ms;
+    --dur: 1ms;
+    --dur-slow: 1ms;
+  }
+}

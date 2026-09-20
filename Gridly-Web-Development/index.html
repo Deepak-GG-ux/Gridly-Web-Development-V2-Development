@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Gridly — Web Development &amp; Digital Solutions</title>
+<meta name="description" content="Gridly designs and develops responsive websites, e-commerce experiences and custom web solutions for modern businesses. Build better. Launch smarter.">
+
+<!-- TODO: replace the domain below with the production URL before launch. -->
+<link rel="canonical" href="https://gridly.netlify.app/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gridly">
+<meta property="og:title" content="Gridly — Web Development &amp; Digital Solutions">
+<meta property="og:description" content="Responsive websites, e-commerce experiences and custom web solutions for modern businesses.">
+<meta property="og:url" content="https://gridly.netlify.app/">
+<meta property="og:image" content="https://gridly.netlify.app/assets/img/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="theme-color" content="#f1f2f4">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/styles/tokens.css">
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/page.css">
+<link rel="stylesheet" href="/styles/home.css">
+<link rel="stylesheet" href="/styles/work.css">
+
+<!-- Applies the saved or system theme before first paint to avoid a flash. -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('gridly:theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+      if (theme === 'dark') document.querySelector('meta[name="theme-color"]').content = '#0b0d12';
+    } catch (e) { /* storage unavailable — light theme stands */ }
+  })();
+</script>
+
+<!--
+  Structured data describes this demo studio only. No ratings, awards, client
+  counts or addresses are asserted. Review before using in production.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Gridly",
+  "slogan": "Build Better. Launch Smarter.",
+  "url": "https://gridly.netlify.app/",
+  "description": "Web development and digital solutions studio building responsive websites, e-commerce experiences and custom web applications.",
+  "logo": "https://gridly.netlify.app/assets/favicon.svg"
+}
+</script>
+</head>
+
+<body data-page="home">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div data-component="header">
+  <noscript>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/work.html">Work</a></li>
+        <li><a href="/process.html">Process</a></li>
+        <li><a href="/technologies.html">Technologies</a></li>
+        <li><a href="/insights.html">Insights</a></li>
+        <li><a href="/internship.html">Internship</a></li>
+        <li><a href="/contact.html">Start a Project</a></li>
+      </ul>
+    </nav>
+  </noscript>
+</div>
+
+<main id="main">
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container hero__grid">
+
+      <div class="hero__content">
+        <h1 class="hero__title">
+          <span class="hero__line" style="--line:0">We build</span>
+          <span class="hero__line" style="--line:1">digital experiences</span>
+          <span class="hero__line" style="--line:2">that move businesses</span>
+          <span class="hero__line" style="--line:3">forward.</span>
+        </h1>
+
+        <p class="hero__sub" style="--line:0">
+          Gridly designs and develops responsive websites, e-commerce experiences and custom
+          web solutions for modern businesses.
+        </p>
+
+        <div class="hero__actions" style="--line:1">
+          <a class="btn btn--primary btn--lg" href="/contact.html">
+            Start a project
+            <span class="btn__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg>
+            </span>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#work">Explore our work</a>
+        </div>
+
+        <p class="hero__trust" style="--line:2">
+          <span>Web Development</span>
+          <span>UI/UX</span>
+          <span>Digital Solutions</span>
+        </p>
+      </div>
+
+      <!-- Interactive product mockup: the one deliberately loud element. -->
+      <div class="hero__visual">
+        <div class="mock" role="img" aria-label="Illustration of a Gridly-built dashboard interface shown in a browser window">
+          <div class="mock__bar" aria-hidden="true">
+            <span class="mock__dots"><i></i><i></i><i></i></span>
+            <span class="mock__url">gridly.netlify.app/dashboard</span>
+          </div>
+
+          <div class="mock__body" aria-hidden="true">
+            <div class="mock__side"><i></i><i></i><i></i><i></i><i></i></div>
+
+            <div class="mock__main">
+              <div class="mock__row">
+                <span class="mock__heading"></span>
+                <span class="mock__chip"><i></i>Live</span>
+              </div>
+
+              <div class="mock__cards">
+                <div class="mock__card"><i></i><i></i></div>
+                <div class="mock__card"><i></i><i></i></div>
+                <div class="mock__card"><i></i><i></i></div>
+              </div>
+
+              <div class="mock__chart">
+                <b style="--h:38%; --i:0"></b>
+                <b style="--h:56%; --i:1"></b>
+                <b style="--h:44%; --i:2"></b>
+                <b style="--h:78%; --i:3"></b>
+                <b style="--h:62%; --i:4"></b>
+                <b style="--h:50%; --i:5"></b>
+                <b style="--h:70%; --i:6"></b>
+              </div>
+
+              <div class="mock__lines"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mock-float" aria-hidden="true">
+          <span class="mock-float__dot"></span>
+          Deployed on Netlify
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================ SERVICES ============================ -->
+  <section class="section" id="services" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">01 — Services</p>
+        <h2 class="section-head__title" id="services-title">What we build</h2>
+        <p class="section-head__lead">
+          Six core offerings. Most projects combine two or three of them — a website that needs
+          a booking tool, or a storefront that starts with a redesign.
+        </p>
+      </div>
+
+      <div class="services-grid" data-render="services"></div>
+    </div>
+  </section>
+
+  <!-- ============================ WHY GRIDLY ============================ -->
+  <section class="section is-night" id="why" aria-labelledby="why-title">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">02 — Approach</p>
+        <h2 class="section-head__title" id="why-title">Technology is only half the work.</h2>
+        <p class="section-head__lead">
+          Code that runs is the minimum. A website earns its place when the design is clear,
+          the copy answers real questions, the engineering can be maintained, and someone is
+          still improving it a year after launch.
+        </p>
+      </div>
+
+      <ol class="principles" data-render="principles"></ol>
+    </div>
+  </section>
+
+  <!-- ============================ SOLUTIONS ============================ -->
+  <section class="section" id="solutions" aria-labelledby="solutions-title">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">03 — Solutions</p>
+        <h2 class="section-head__title section-head__title--wide" id="solutions-title">Solutions for every stage</h2>
+        <p class="section-head__lead">
+          Find the description that sounds like your situation. These are service offerings,
+          not case studies — your project gets scoped from scratch.
+        </p>
+      </div>
+
+      <div class="solutions-grid" data-render="solutions"></div>
+    </div>
+  </section>
+
+  <!-- ============================ INDUSTRIES ============================ -->
+  <section class="section" id="industries" aria-labelledby="industries-title">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">04 — Industries</p>
+        <h2 class="section-head__title" id="industries-title">Built for different industries</h2>
+        <p class="section-head__lead">
+          Every sector has a different first question from its visitors. Select one to see the
+          features we would usually plan for.
+        </p>
+      </div>
+
+      <div class="industries" data-render="industries"></div>
+    </div>
+  </section>
+
+  <!-- ============================ WORK ============================ -->
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">05 — Work</p>
+        <h2 class="section-head__title" id="work-title">Selected work</h2>
+        <p class="section-head__lead">
+          Concept projects built to demonstrate capability across industries and project types.
+          Each one opens into a full case study.
+        </p>
+      </div>
+
+      <div class="notice notice--info" style="margin-bottom: var(--s-6)">
+        <p>
+          <strong>Demo content.</strong> Every project below is a self-directed concept build,
+          clearly labelled as such. No client engagements, results or metrics are claimed.
+        </p>
+      </div>
+
+      <div class="work-bar">
+        <div class="filters" data-render="work-filters" role="group" aria-label="Filter projects by type"></div>
+        <p class="work-bar__count" data-work-count aria-live="polite">6 projects</p>
+      </div>
+
+      <div class="work-grid" data-render="work-grid"></div>
+
+      <p style="margin-top: var(--s-7)">
+        <a class="btn btn--ghost" href="/work.html">View all work</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================ PROCESS ============================ -->
+  <section class="section is-night" id="process" aria-labelledby="process-title">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">06 — Process</p>
+        <h2 class="section-head__title" id="process-title">How we work</h2>
+        <p class="section-head__lead">
+          Seven stages from first conversation to ongoing improvement. Select a stage to see
+          what happens in it and what you receive at the end.
+        </p>
+      </div>
+
+      <div class="process" data-render="process"></div>
+    </div>
+  </section>
+
+  <!-- ============================ TECHNOLOGY ============================ -->
+  <section class="section" id="technology" aria-labelledby="tech-title">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">07 — Technology</p>
+        <h2 class="section-head__title" id="tech-title">How we build</h2>
+        <p class="section-head__lead">
+          Technology is chosen per project against the requirement. Not every tool below appears
+          in every build — that would be a worse outcome, not a better one.
+        </p>
+      </div>
+
+      <ul class="tech-strip" data-render="tech-strip"></ul>
+
+      <p style="margin-top: var(--s-6)">
+        <a class="link-arrow" href="/technologies.html">
+          See how each technology fits
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================ CTA ============================ -->
+  <section class="section section--tight cta-band is-night" aria-labelledby="cta-title">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container cta-band__inner">
+      <div>
+        <h2 class="cta-band__title" id="cta-title">Let's build something useful.</h2>
+      </div>
+      <div>
+        <p class="lead" style="margin-bottom: var(--s-5)">
+          Tell us what the project needs to achieve. We will come back with an approach, a scope
+          and an honest view of what it takes.
+        </p>
+        <div class="cta-band__actions">
+          <a class="btn btn--primary btn--lg" href="/contact.html">
+            Start a project
+            <span class="btn__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg>
+            </span>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="/faq.html">Read the FAQ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-component="footer"></div>
+
+<script type="module" src="/scripts/pages/home.js"></script>
+</body>
+</html>

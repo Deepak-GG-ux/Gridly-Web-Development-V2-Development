@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>About Gridly — Web Development Studio</title>
+<meta name="description" content="Gridly is a web development and digital product studio building responsive, maintainable websites, online stores and web applications.">
+<link rel="canonical" href="https://gridly.netlify.app/about">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gridly">
+<meta property="og:title" content="About Gridly — Web Development Studio">
+<meta property="og:description" content="Gridly is a web development and digital product studio building responsive, maintainable websites, online stores and web applications.">
+<meta property="og:url" content="https://gridly.netlify.app/about">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="theme-color" content="#f1f2f4">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/styles/tokens.css">
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/page.css">
+<link rel="stylesheet" href="/styles/home.css">
+
+<!-- Applies the saved or system theme before first paint to avoid a flash. -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('gridly:theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+      if (theme === 'dark') document.querySelector('meta[name="theme-color"]').content = '#0b0d12';
+    } catch (e) { /* storage unavailable - light theme stands */ }
+  })();
+</script>
+</head>
+
+<body data-page="about">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div data-component="header">
+  <noscript>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/work.html">Work</a></li>
+        <li><a href="/process.html">Process</a></li>
+        <li><a href="/technologies.html">Technologies</a></li>
+        <li><a href="/insights.html">Insights</a></li>
+        <li><a href="/internship.html">Internship</a></li>
+        <li><a href="/contact.html">Start a Project</a></li>
+      </ul>
+    </nav>
+  </noscript>
+</div>
+
+<main id="main">
+  <section class="page-head">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-head__grid">
+        <div>
+          <p class="section-head__index">About</p>
+          <h1 class="page-head__title">Who is Gridly?</h1>
+        </div>
+        <div>
+          <p class="lead page-head__lead">Gridly is a web development and digital product studio focused on creating useful, responsive and maintainable digital experiences for businesses that need their website to do real work.</p>
+          <a class="btn btn--primary" href="/contact.html" style="margin-top: var(--s-5)">Start a project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="intro-title">
+    <div class="container">
+      <div class="split split--aside">
+        <div class="prose">
+          <h2 id="intro-title">What Gridly does</h2>
+          <p>
+            Gridly designs and builds websites, online stores and browser-based tools. The work
+            usually begins with a business that has outgrown what it currently has: a site that
+            was built years ago, a process that still runs on a shared spreadsheet, or nothing
+            at all beyond a phone number and a social media page.
+          </p>
+          <p>
+            We handle the whole path from that first conversation to a deployed, documented
+            website — requirement analysis, information architecture, interface design,
+            frontend and backend development, testing, deployment and the maintenance that
+            follows. Projects are scoped in writing before anything is designed, because the
+            cheapest time to change your mind is before the build starts.
+          </p>
+          <p>
+            We are deliberately a small studio. That means fewer projects at once, direct
+            contact with the person writing the code, and no layer of account management
+            between a question and an answer.
+          </p>
+
+          <h3>The kind of work that suits us</h3>
+          <ul>
+            <li>Businesses that need a first professional website they can grow into</li>
+            <li>Organisations whose existing site is dated, slow or unusable on a phone</li>
+            <li>Teams moving a manual process into a small internal web application</li>
+            <li>Retailers taking a catalogue online for the first time</li>
+          </ul>
+        </div>
+
+        <aside class="contact-panel" aria-labelledby="glance-title">
+          <h2 class="card-title" id="glance-title">At a glance</h2>
+          <dl>
+            <div>
+              <dt>Discipline</dt>
+              <dd>Web development, UI/UX design and digital solutions</dd>
+            </div>
+            <div>
+              <dt>Engagement model</dt>
+              <dd>Fixed-scope projects with a written brief, plus optional ongoing maintenance</dd>
+            </div>
+            <div>
+              <dt>Delivery</dt>
+              <dd>Version-controlled repository, continuous deployment, documented handover</dd>
+            </div>
+            <div>
+              <dt>Ownership</dt>
+              <dd>You own the code, the repository, the domain and the hosting accounts</dd>
+            </div>
+          </dl>
+          <p class="muted" style="font-size: var(--fs-xs)">
+            Gridly is a studio project built as a portfolio and internship piece. Client names,
+            revenue figures and awards are deliberately absent because there are none to report.
+          </p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="mv-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-head__index">01 &mdash; Direction</p>
+        <h2 class="section-head__title" id="mv-title">Mission and vision</h2>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3 class="card-title">Mission</h3>
+          <p class="muted">
+            To build websites and web tools that measurably reduce friction for the businesses
+            that run them — fewer repeated questions, fewer manual steps, fewer visitors who
+            leave without finding what they came for. Every project should leave the client
+            able to maintain and extend what they paid for.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 class="card-title">Vision</h3>
+          <p class="muted">
+            A web where small and mid-sized organisations are not forced to choose between an
+            unmaintainable template and an agency budget they cannot justify. Good structure,
+            accessibility and performance should be the default standard of a normal business
+            website, not a premium upgrade.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="values-title">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">02 &mdash; Values</p>
+        <h2 class="section-head__title" id="values-title">Core values</h2>
+        <p class="section-head__lead">
+          These are working rules rather than slogans. Each one changes a decision we make
+          during a project.
+        </p>
+      </div>
+
+      <ul class="values">
+        <li class="value">
+          <h3 class="value__title">Clarity</h3>
+          <p>
+            If a visitor has to work out what a page is for, the page has failed. We write
+            interface copy in plain language and remove anything that does not help someone
+            complete their task.
+          </p>
+        </li>
+        <li class="value">
+          <h3 class="value__title">Craft</h3>
+          <p>
+            Details that nobody articulates still get noticed: consistent spacing, aligned
+            columns, type that holds its rhythm at every size. We spend time there because it
+            is what separates a considered site from an assembled one.
+          </p>
+        </li>
+        <li class="value">
+          <h3 class="value__title">Reliability</h3>
+          <p>
+            Scope agreed in writing, honest timelines, and a deployment that can be repeated
+            from an empty machine. A project is only finished when someone else could pick it
+            up from the documentation.
+          </p>
+        </li>
+        <li class="value">
+          <h3 class="value__title">Curiosity</h3>
+          <p>
+            We ask why a requirement exists before implementing it. Often the stated request
+            and the underlying problem are different, and the second one has a simpler
+            solution.
+          </p>
+        </li>
+        <li class="value">
+          <h3 class="value__title">Continuous improvement</h3>
+          <p>
+            The version that launches is a hypothesis. Watching how people actually use it and
+            fixing what trips them up is where a site gets genuinely good.
+          </p>
+        </li>
+        <li class="value">
+          <h3 class="value__title">Accessibility by default</h3>
+          <p>
+            Keyboard operation, visible focus, sensible heading structure and reduced-motion
+            support are part of the build, not a remediation task scheduled for later.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section is-night" aria-labelledby="philosophy-title">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">03 &mdash; Philosophy</p>
+        <h2 class="section-head__title" id="philosophy-title">Technology is only half the work.</h2>
+        <p class="section-head__lead">
+          Code that runs is the minimum. A website earns its place when the design is clear,
+          the copy answers real questions, the engineering can be maintained, and someone is
+          still improving it a year after launch.
+        </p>
+      </div>
+
+      <ol class="principles" data-render="principles"></ol>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="approach-title">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">04 &mdash; Approach</p>
+        <h2 class="section-head__title" id="approach-title">How we build</h2>
+        <p class="section-head__lead">
+          The same technical approach underpins every Gridly project, whatever the industry.
+        </p>
+      </div>
+
+      <div class="split">
+        <div class="prose">
+          <h3>Design approach</h3>
+          <p>
+            Structure is settled before style. Wireframes answer what goes where; visual design
+            answers what it looks like. Doing them in that order means structural feedback
+            arrives before anyone has argued about colour.
+          </p>
+          <p>
+            The visual system is then defined as tokens — colour, type scale, spacing, radii,
+            motion — so that a button looks the same on every page because it is literally the
+            same component, not a lookalike rebuilt per screen.
+          </p>
+        </div>
+
+        <div class="prose">
+          <h3>Technical approach</h3>
+          <p>
+            Technology is chosen against the requirement. A brochure site and an internal tool
+            have almost nothing in common architecturally, and treating them the same produces
+            either an over-engineered website or an under-engineered application.
+          </p>
+          <p>
+            Content lives in structured data rather than being duplicated through markup, so
+            adding a service or a project later is an edit to one file. Everything is version
+            controlled, and deployment is automated from the repository rather than uploaded by
+            hand.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="why-title">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">05 &mdash; Why Gridly</p>
+        <h2 class="section-head__title" id="why-title">Why choose Gridly</h2>
+        <p class="section-head__lead">
+          Six practical reasons, each of which you can hold us to during the project.
+        </p>
+      </div>
+
+      <div class="card-grid card-grid--3">
+        <article class="card"><h3 class="card-title">Written scope first</h3><p class="muted">You approve a sitemap and a scope document before design starts, so nothing about the finished site is a surprise.</p></article>
+        <article class="card"><h3 class="card-title">Direct contact</h3><p class="muted">You talk to the person building the site. Questions get technical answers rather than being relayed.</p></article>
+        <article class="card"><h3 class="card-title">Mobile-first, genuinely</h3><p class="muted">Layouts are designed at 320 pixels first and tested across the full breakpoint range, including forms and navigation.</p></article>
+        <article class="card"><h3 class="card-title">Performance budgeted</h3><p class="muted">Dependencies have to justify themselves. Pages are measured rather than assumed to be fast.</p></article>
+        <article class="card"><h3 class="card-title">Documented handover</h3><p class="muted">Architecture, data structures and deployment steps are written down in the repository, not held in someone's head.</p></article>
+        <article class="card"><h3 class="card-title">You keep everything</h3><p class="muted">Code, repository, domain and hosting accounts are yours. Nothing is locked to a builder you cannot leave.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">06 &mdash; Services</p>
+        <h2 class="section-head__title" id="services-title">What we build</h2>
+        <p class="section-head__lead">
+          Eight services. Most projects combine two or three of them.
+        </p>
+      </div>
+
+      <div class="services-grid" data-render="services"></div>
+    </div>
+  </section>
+  <section class="section section--tight cta-band is-night" aria-labelledby="cta-title">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container cta-band__inner">
+      <div>
+        <h2 class="cta-band__title" id="cta-title">Let's talk about your project.</h2>
+      </div>
+      <div>
+        <p class="lead" style="margin-bottom: var(--s-5)">Tell us what the project needs to achieve. We will come back with an approach, a scope and an honest view of what it takes.</p>
+        <div class="cta-band__actions">
+          <a class="btn btn--primary btn--lg" href="/contact.html">Start a project</a>
+          <a class="btn btn--ghost btn--lg" href="/services.html">Browse services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-component="footer"></div>
+
+<script type="module" src="/scripts/pages/about.js"></script>
+</body>
+</html>

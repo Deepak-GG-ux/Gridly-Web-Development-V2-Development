@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Start a Project — Contact Gridly</title>
+<meta name="description" content="Tell Gridly what your project needs to achieve. Send a project enquiry with your budget range, timeline and requirements.">
+<link rel="canonical" href="https://gridly.netlify.app/contact">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gridly">
+<meta property="og:title" content="Start a Project — Contact Gridly">
+<meta property="og:description" content="Tell Gridly what your project needs to achieve. Send a project enquiry with your budget range, timeline and requirements.">
+<meta property="og:url" content="https://gridly.netlify.app/contact">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="theme-color" content="#f1f2f4">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/styles/tokens.css">
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/page.css">
+<link rel="stylesheet" href="/styles/home.css">
+
+<!-- Applies the saved or system theme before first paint to avoid a flash. -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('gridly:theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+      if (theme === 'dark') document.querySelector('meta[name="theme-color"]').content = '#0b0d12';
+    } catch (e) { /* storage unavailable - light theme stands */ }
+  })();
+</script>
+</head>
+
+<body data-page="contact">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div data-component="header">
+  <noscript>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/work.html">Work</a></li>
+        <li><a href="/process.html">Process</a></li>
+        <li><a href="/technologies.html">Technologies</a></li>
+        <li><a href="/insights.html">Insights</a></li>
+        <li><a href="/internship.html">Internship</a></li>
+        <li><a href="/contact.html">Start a Project</a></li>
+      </ul>
+    </nav>
+  </noscript>
+</div>
+
+<main id="main">
+  <section class="page-head">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-head__grid">
+        <div>
+          <p class="section-head__index">Contact</p>
+          <h1 class="page-head__title">Let's build something useful.</h1>
+        </div>
+        <div>
+          <p class="lead page-head__lead">Tell us what the project needs to achieve. We will come back with an approach, a scope and an honest view of what it takes.</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="contact-title">
+    <div class="container">
+      <h2 class="visually-hidden" id="contact-title">Project enquiry</h2>
+
+      <div class="contact-grid">
+        <div>
+          <div class="notice" style="margin-bottom: var(--s-6)">
+            <p>
+              <strong>This form does not send email.</strong> The site is deployed as static
+              files with no mail service connected, so submitting will not deliver a message.
+              Instead it validates your details and hands them back to you, ready to copy or to
+              open in your own email client. Connecting it for real takes two attributes &mdash;
+              the steps are in the project README.
+            </p>
+          </div>
+
+          <form class="contact-form" data-contact-form novalidate>
+            <p class="form-error" data-form-error hidden role="alert"></p>
+
+            <div class="form-row form-row--2">
+              <div class="field">
+                <label class="field__label" for="name">Name <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="name" name="name" type="text" autocomplete="name" required maxlength="80" aria-describedby="name-error">
+                <p class="field__error" id="name-error"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="email" name="email" type="email" autocomplete="email" required maxlength="120" aria-describedby="email-error">
+                <p class="field__error" id="email-error"></p>
+              </div>
+            </div>
+
+            <div class="form-row form-row--2">
+              <div class="field">
+                <label class="field__label" for="phone">Phone</label>
+                <input class="input" id="phone" name="phone" type="tel" autocomplete="tel" maxlength="24" aria-describedby="phone-hint phone-error">
+                <p class="field__hint" id="phone-hint">Optional. Include the country code.</p>
+                <p class="field__error" id="phone-error"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="company">Company</label>
+                <input class="input" id="company" name="company" type="text" autocomplete="organization" maxlength="80" aria-describedby="company-error">
+                <p class="field__error" id="company-error"></p>
+              </div>
+            </div>
+
+            <div class="form-row form-row--2">
+              <div class="field">
+                <label class="field__label" for="projectType">Project type</label>
+                <select class="select" id="projectType" name="projectType">
+                  <option value="">Select a type</option>
+                  <option value="website-development">Website development</option>
+                  <option value="web-applications">Web application</option>
+                  <option value="ecommerce">E-commerce</option>
+                  <option value="ui-ux">UI/UX design</option>
+                  <option value="redesign">Redesign</option>
+                  <option value="seo-development">SEO-friendly development</option>
+                  <option value="performance">Performance optimization</option>
+                  <option value="maintenance">Maintenance</option>
+                  <option value="custom-solutions">Custom digital solution</option>
+                  <option value="other">Something else</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="budget">Budget range</label>
+                <select class="select" id="budget" name="budget">
+                  <option value="">Prefer not to say</option>
+                  <option value="Under 25,000">Under ₹25,000</option>
+                  <option value="25,000 - 75,000">₹25,000 – ₹75,000</option>
+                  <option value="75,000 - 2,00,000">₹75,000 – ₹2,00,000</option>
+                  <option value="Above 2,00,000">Above ₹2,00,000</option>
+                  <option value="Not decided">Not decided yet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="subject">Subject <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" id="subject" name="subject" type="text" required maxlength="120" aria-describedby="subject-error">
+              <p class="field__error" id="subject-error"></p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="message">Project description <span class="req" aria-hidden="true">*</span></label>
+              <textarea class="textarea" id="message" name="message" required maxlength="1500" aria-describedby="message-hint message-error"></textarea>
+              <p class="field__hint" id="message-hint">What should the site or tool do, and is there a deadline?</p>
+              <p class="field__counter" data-counter>0 / 1500</p>
+              <p class="field__error" id="message-error"></p>
+            </div>
+
+            <button class="btn btn--primary btn--lg" type="submit">Send enquiry</button>
+          </form>
+
+          <div class="form-success" data-form-success hidden>
+            <h2 class="form-success__title">Enquiry ready — but not sent</h2>
+            <p>
+              Your details passed validation. Because this deployment has no mail service
+              attached, nothing has been transmitted. Copy the summary below, or open it in your
+              email client to send it yourself.
+            </p>
+            <pre class="enquiry-output" data-enquiry-output></pre>
+            <div style="display:flex; flex-wrap:wrap; gap:var(--s-3)">
+              <button class="btn btn--primary btn--sm" type="button" data-copy-enquiry>Copy enquiry</button>
+              <a class="btn btn--ghost btn--sm" href="#" data-mailto>Open in email client</a>
+              <button class="btn btn--quiet btn--sm" type="button" data-form-reset>Write another</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="contact-panel" aria-labelledby="direct-title">
+          <h2 class="card-title" id="direct-title">Other ways to reach us</h2>
+          <dl>
+            <div><dt>Email</dt><dd>hello@gridly.studio</dd></div>
+            <div><dt>Phone</dt><dd>+91 00000 00000</dd></div>
+            <div><dt>Working hours</dt><dd>Monday to Friday, 10:00-18:00 IST</dd></div>
+            <div><dt>Response time</dt><dd>We reply to project enquiries within two working days.</dd></div>
+          </dl>
+          <p class="muted" style="font-size: var(--fs-xs)">
+            Contact details on this site are demonstration values for a portfolio project.
+            Replace them in <code>scripts/data/site.js</code> before using the site commercially.
+          </p>
+
+          <hr>
+
+          <h2 class="card-title">Before you write</h2>
+          <p class="muted" style="font-size: var(--fs-sm)">
+            The most useful enquiries mention what the site or tool has to achieve, roughly how
+            many pages or screens you expect, and any date you are working towards. A budget
+            range helps too, because it changes what can sensibly be recommended.
+          </p>
+          <a class="link-arrow" href="/faq.html">Read the FAQ first</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-component="footer"></div>
+
+<script type="module" src="/scripts/pages/contact.js"></script>
+</body>
+</html>

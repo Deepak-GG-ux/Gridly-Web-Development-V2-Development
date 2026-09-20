@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Privacy | Gridly</title>
+<meta name="description" content="How this website handles information: no analytics, no tracking, one local theme preference, and a contact form that does not transmit data.">
+<link rel="canonical" href="https://gridly.netlify.app/privacy">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gridly">
+<meta property="og:title" content="Privacy | Gridly">
+<meta property="og:description" content="How this website handles information: no analytics, no tracking, one local theme preference, and a contact form that does not transmit data.">
+<meta property="og:url" content="https://gridly.netlify.app/privacy">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="theme-color" content="#f1f2f4">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/styles/tokens.css">
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/page.css">
+<link rel="stylesheet" href="/styles/home.css">
+
+<!-- Applies the saved or system theme before first paint to avoid a flash. -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('gridly:theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+      if (theme === 'dark') document.querySelector('meta[name="theme-color"]').content = '#0b0d12';
+    } catch (e) { /* storage unavailable - light theme stands */ }
+  })();
+</script>
+</head>
+
+<body data-page="privacy">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div data-component="header">
+  <noscript>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/work.html">Work</a></li>
+        <li><a href="/process.html">Process</a></li>
+        <li><a href="/technologies.html">Technologies</a></li>
+        <li><a href="/insights.html">Insights</a></li>
+        <li><a href="/internship.html">Internship</a></li>
+        <li><a href="/contact.html">Start a Project</a></li>
+      </ul>
+    </nav>
+  </noscript>
+</div>
+
+<main id="main">
+  <section class="page-head">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-head__grid">
+        <div>
+          <p class="section-head__index">Legal</p>
+          <h1 class="page-head__title">Privacy</h1>
+        </div>
+        <div>
+          <p class="lead page-head__lead">How this website handles information. This is a template for a demonstration project and is not legal advice.</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="privacy-title">
+    <div class="container container--narrow">
+      <div class="notice">
+        <p>
+          <strong>Template document.</strong> This page is a plain-language starting point for a
+          portfolio project. It has not been reviewed by a lawyer and makes no claim of
+          compliance with any specific regulation. Replace it with a reviewed policy before
+          using this site commercially.
+        </p>
+      </div>
+
+      <div class="legal prose" style="margin-top: var(--s-7)">
+        <h2 id="privacy-title">What this site collects</h2>
+        <p>
+          This website is a static site. It has no accounts, no analytics, no advertising and no
+          third-party tracking scripts. Pages are served as files and no visitor profile is
+          built.
+        </p>
+
+        <h2>The contact form</h2>
+        <p>
+          The contact form is not connected to a mail service in this deployment. When you
+          submit it, the details you typed stay in your browser and are shown back to you so you
+          can copy them or open them in your own email client. Nothing is transmitted to Gridly
+          or to any third party.
+        </p>
+        <p>
+          If the form is later connected to a form-handling service, the details you submit
+          would be processed by that service. This page would need updating to name the service
+          and describe its retention period.
+        </p>
+
+        <h2>Information stored in your browser</h2>
+        <p>
+          One preference is stored locally on your device: your chosen colour theme, saved under
+          the key <code>gridly:theme</code>. It never leaves your browser and is not used to
+          identify you. Clearing your site data removes it.
+        </p>
+
+        <h2>Third-party requests</h2>
+        <p>
+          Fonts are loaded from Google Fonts, which means your browser makes a request to
+          Google's servers when a page loads. No other external service is contacted. To remove
+          this, the font files can be self-hosted from the <code>assets/</code> folder.
+        </p>
+
+        <h2>Certificate verification</h2>
+        <p>
+          The verification page checks an ID against a list held in the site's own JavaScript.
+          No lookup is sent anywhere, and the ID you type is not recorded.
+        </p>
+
+        <h2>Contact about privacy</h2>
+        <p>
+          Questions about this page can be sent through the contact page. Contact details on
+          this site are demonstration values for a portfolio project.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-component="footer"></div>
+
+<script type="module" src="/scripts/pages/faq.js"></script>
+</body>
+</html>

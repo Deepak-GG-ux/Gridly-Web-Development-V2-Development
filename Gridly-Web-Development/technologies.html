@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Technologies — HTML, CSS, JavaScript, PHP, Python, MySQL | Gridly</title>
+<meta name="description" content="The technologies Gridly works with, what each one does and where it fits in a project: HTML, CSS, JavaScript, PHP, Python, MySQL, Git, GitHub and Netlify.">
+<link rel="canonical" href="https://gridly.netlify.app/technologies">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gridly">
+<meta property="og:title" content="Technologies — HTML, CSS, JavaScript, PHP, Python, MySQL | Gridly">
+<meta property="og:description" content="The technologies Gridly works with, what each one does and where it fits in a project: HTML, CSS, JavaScript, PHP, Python, MySQL, Git, GitHub and Netlify.">
+<meta property="og:url" content="https://gridly.netlify.app/technologies">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="theme-color" content="#f1f2f4">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/styles/tokens.css">
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/page.css">
+<link rel="stylesheet" href="/styles/home.css">
+
+<!-- Applies the saved or system theme before first paint to avoid a flash. -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('gridly:theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+      if (theme === 'dark') document.querySelector('meta[name="theme-color"]').content = '#0b0d12';
+    } catch (e) { /* storage unavailable - light theme stands */ }
+  })();
+</script>
+</head>
+
+<body data-page="technologies">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div data-component="header">
+  <noscript>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/work.html">Work</a></li>
+        <li><a href="/process.html">Process</a></li>
+        <li><a href="/technologies.html">Technologies</a></li>
+        <li><a href="/insights.html">Insights</a></li>
+        <li><a href="/internship.html">Internship</a></li>
+        <li><a href="/contact.html">Start a Project</a></li>
+      </ul>
+    </nav>
+  </noscript>
+</div>
+
+<main id="main">
+  <section class="page-head">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-head__grid">
+        <div>
+          <p class="section-head__index">Technologies</p>
+          <h1 class="page-head__title">How we build</h1>
+        </div>
+        <div>
+          <p class="lead page-head__lead">The technologies Gridly works with, what each one actually does, and where it sits in a project. Technology is chosen per project against the requirement.</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" aria-labelledby="selection-title">
+    <div class="container">
+      <div class="notice notice--info">
+        <p>
+          <strong>Not every project uses everything below.</strong> A brochure website and an
+          internal business tool have almost nothing in common architecturally. Listing a stack
+          is not the same as claiming it is deployed everywhere &mdash; the selection is made
+          during the planning stage, against the requirement, and written into the scope
+          document.
+        </p>
+      </div>
+
+      <ul class="tech-strip" data-render="tech-strip" style="margin-top: var(--s-6)"></ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="catalogue-title">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">Catalogue</p>
+        <h2 class="section-head__title" id="catalogue-title">What each technology does</h2>
+        <p class="section-head__lead">
+          Grouped by where it runs: in the browser, on the server, in the database, or around
+          the development and deployment process.
+        </p>
+      </div>
+
+      <div class="tech-groups" data-render="tech-catalogue"></div>
+    </div>
+  </section>
+
+  <section class="section is-night" aria-labelledby="stack-title">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">Architecture</p>
+        <h2 class="section-head__title" id="stack-title">How the layers fit together</h2>
+        <p class="section-head__lead">
+          A request travels through the same layers in most web projects. Knowing which layer
+          owns a problem is most of debugging.
+        </p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="table">
+          <caption class="visually-hidden">Layers of a typical web stack</caption>
+          <thead>
+            <tr><th scope="col">Layer</th><th scope="col">Runs where</th><th scope="col">Typical tools</th><th scope="col">Responsible for</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Presentation</th><td>Visitor's browser</td><td>HTML, CSS, JavaScript</td><td>Structure, layout, interaction, accessibility</td></tr>
+            <tr><th scope="row">Application</th><td>Server</td><td>PHP, Python</td><td>Request handling, business rules, server-side validation</td></tr>
+            <tr><th scope="row">Data</th><td>Database server</td><td>MySQL</td><td>Persistent storage, relationships, queries, integrity</td></tr>
+            <tr><th scope="row">Delivery</th><td>CDN / host</td><td>Netlify</td><td>Hosting, HTTPS, redirects, headers, caching</td></tr>
+            <tr><th scope="row">Process</th><td>Developer machine</td><td>Git, GitHub, VS Code, DevTools</td><td>Version control, review, debugging, deployment</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="notice" style="margin-top: var(--s-7)">
+        <p>
+          <strong>About this website specifically.</strong> This site is deployed to Netlify as
+          static files, so it runs HTML, CSS and JavaScript only. PHP, Python and MySQL are part
+          of Gridly's working stack and are covered here as supported technologies &mdash; they
+          are not executing on this deployment, and nothing on this site pretends otherwise.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="choose-title">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">Selection</p>
+        <h2 class="section-head__title" id="choose-title">How the stack gets chosen</h2>
+        <p class="section-head__lead">
+          Four questions settle most technology decisions before a line of code is written.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card"><h3 class="card-title">Does the content change often, and by whom?</h3><p class="muted">Rarely-changing content can live in structured data files. Content edited weekly by a non-developer needs an admin interface and a database behind it.</p></article>
+        <article class="card"><h3 class="card-title">Is there state to keep?</h3><p class="muted">Accounts, orders, bookings and submissions need a server and a database. A brochure site has none of that and should not carry the cost of it.</p></article>
+        <article class="card"><h3 class="card-title">Who maintains it afterwards?</h3><p class="muted">A stack the client's own developer can read beats a clever one they cannot. Maintainability outranks novelty.</p></article>
+        <article class="card"><h3 class="card-title">What does hosting allow?</h3><p class="muted">Static hosting cannot execute PHP. That constraint is settled at planning time, not discovered during deployment.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="section section--tight cta-band is-night" aria-labelledby="cta-title">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container cta-band__inner">
+      <div>
+        <h2 class="cta-band__title" id="cta-title">Want a recommendation for your project?</h2>
+      </div>
+      <div>
+        <p class="lead" style="margin-bottom: var(--s-5)">Describe what the site or tool has to do and we will explain which parts of this stack it actually needs.</p>
+        <div class="cta-band__actions">
+          <a class="btn btn--primary btn--lg" href="/contact.html">Start a project</a>
+          <a class="btn btn--ghost btn--lg" href="/work.html">See it applied</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-component="footer"></div>
+
+<script type="module" src="/scripts/pages/technologies.js"></script>
+</body>
+</html>

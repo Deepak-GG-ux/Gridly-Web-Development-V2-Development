@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Every URL below resolves to a page that exists in this repository.
+  Replace https://gridly.netlify.app with your production domain after deploying.
+  404.html, certificate.html and article.html are intentionally excluded:
+  the first two are noindex, and article pages are generated from a query
+  parameter rather than being separate documents.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://gridly.netlify.app/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://gridly.netlify.app/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://gridly.netlify.app/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://gridly.netlify.app/work</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://gridly.netlify.app/process</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gridly.netlify.app/technologies</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gridly.netlify.app/insights</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://gridly.netlify.app/internship</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gridly.netlify.app/contact</loc><changefreq>yearly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://gridly.netlify.app/faq</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gridly.netlify.app/verify/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gridly.netlify.app/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://gridly.netlify.app/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Verify a Certificate | Gridly</title>
+<meta name="description" content="Check a Gridly internship certificate by entering its certificate ID. Verified records show the name, role, project, duration and issue date.">
+<link rel="canonical" href="https://gridly.netlify.app/verify/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gridly">
+<meta property="og:title" content="Verify a Certificate | Gridly">
+<meta property="og:description" content="Check a Gridly internship certificate by entering its certificate ID. Verified records show the name, role, project, duration and issue date.">
+<meta property="og:url" content="https://gridly.netlify.app/verify/">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="theme-color" content="#f1f2f4">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/styles/tokens.css">
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/page.css">
+<link rel="stylesheet" href="/styles/home.css">
+<link rel="stylesheet" href="/styles/verify.css">
+
+<!-- Applies the saved or system theme before first paint to avoid a flash. -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('gridly:theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+      if (theme === 'dark') document.querySelector('meta[name="theme-color"]').content = '#0b0d12';
+    } catch (e) { /* storage unavailable - light theme stands */ }
+  })();
+</script>
+</head>
+
+<body data-page="verify">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div data-component="header">
+  <noscript>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/work.html">Work</a></li>
+        <li><a href="/process.html">Process</a></li>
+        <li><a href="/technologies.html">Technologies</a></li>
+        <li><a href="/insights.html">Insights</a></li>
+        <li><a href="/internship.html">Internship</a></li>
+        <li><a href="/contact.html">Start a Project</a></li>
+      </ul>
+    </nav>
+  </noscript>
+</div>
+
+<main id="main">
+  <section class="page-head">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-head__grid">
+        <div>
+          <p class="section-head__index">Verification</p>
+          <h1 class="page-head__title">Verify a certificate</h1>
+        </div>
+        <div>
+          <p class="lead page-head__lead">Check the authenticity of a Gridly internship certificate by entering its certificate ID. Records are looked up directly on this page.</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="verify-title">
+    <div class="container">
+      <h2 class="visually-hidden" id="verify-title">Certificate lookup</h2>
+
+      <div class="verify-layout">
+        <form class="verify-form" data-verify-form novalidate>
+          <div class="field" style="margin-bottom: 0">
+            <label class="field__label" for="certificate-id">Certificate ID</label>
+            <input
+              class="input"
+              id="certificate-id"
+              name="id"
+              type="text"
+              placeholder="GRIDLY-INT-2026-DB014"
+              autocomplete="off"
+              spellcheck="false"
+              data-verify-input
+              aria-describedby="certificate-hint"
+            >
+            <p class="verify-hint" id="certificate-hint">
+              Format: <code>GRIDLY-INT-YYYY-XXNNN</code>. The ID is printed on the certificate.
+            </p>
+          </div>
+
+          <button class="btn btn--primary btn--block" type="submit">Verify certificate</button>
+
+          <button class="verify-sample" type="button" data-sample-id="GRIDLY-INT-2026-DB014">
+            Try the example: GRIDLY-INT-2026-DB014
+          </button>
+
+          <p class="verify-hint" style="padding-top: var(--s-4); border-top: 1px solid var(--border)">
+            You can also link straight to a result:
+            <code>/verify/?id=GRIDLY-INT-2026-DB014</code>
+          </p>
+        </form>
+
+        <div data-render="verify-result" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">How it works</p>
+        <h2 class="section-head__title" id="how-title">About this verification service</h2>
+        <p class="section-head__lead">
+          A short explanation of what a verified result does and does not mean.
+        </p>
+      </div>
+
+      <div class="card-grid card-grid--3">
+        <article class="card">
+          <h3 class="card-title">What is checked</h3>
+          <p class="muted">
+            The ID you enter is compared against the register of internship certificates issued
+            by Gridly. A match returns the full record: name, roll number, role, project,
+            duration, technologies, signatory and issue date.
+          </p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">What it confirms</h3>
+          <p class="muted">
+            That Gridly issued a certificate with that ID, and that the details shown are the
+            details on the register. Any discrepancy between a printed certificate and this
+            record means the printed copy should not be relied on.
+          </p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">What it is not</h3>
+          <p class="muted">
+            This is not an accreditation body, a university record or a government verification
+            service. It confirms an internship completed on the Gridly website project and
+            nothing beyond that.
+          </p>
+        </article>
+      </div>
+
+      <div class="notice notice--info" style="margin-top: var(--s-7)">
+        <p>
+          <strong>Privacy.</strong> The lookup runs entirely in your browser against a list held
+          in this page's JavaScript. The ID you type is not transmitted or recorded anywhere.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="section section--tight cta-band is-night" aria-labelledby="cta-title">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container cta-band__inner">
+      <div>
+        <h2 class="cta-band__title" id="cta-title">Looking for the internship itself?</h2>
+      </div>
+      <div>
+        <p class="lead" style="margin-bottom: var(--s-5)">The internship page covers the objectives, workflow, project work and testing behind this certificate.</p>
+        <div class="cta-band__actions">
+          <a class="btn btn--primary btn--lg" href="/internship.html">View the internship</a>
+          <a class="btn btn--ghost btn--lg" href="/contact.html">Contact Gridly</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-component="footer"></div>
+
+<script type="module" src="/scripts/pages/verify.js"></script>
+</body>
+</html>

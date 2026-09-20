@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Individual certificate records are reached from the verification page and
+# are not useful as search results.
+Disallow: /certificate.html
+Disallow: /certificate
+
+# TODO: replace with your production domain after deploying.
+Sitemap: https://gridly.netlify.app/sitemap.xml

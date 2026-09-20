@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Page not found | Gridly</title>
+<meta name="description" content="The page you were looking for could not be found. Head back to the Gridly homepage or explore the rest of the site.">
+<link rel="canonical" href="https://gridly.netlify.app/404">
+<meta name="robots" content="noindex">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gridly">
+<meta property="og:title" content="Page not found | Gridly">
+<meta property="og:description" content="The page you were looking for could not be found. Head back to the Gridly homepage or explore the rest of the site.">
+<meta property="og:url" content="https://gridly.netlify.app/404">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="theme-color" content="#f1f2f4">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/styles/tokens.css">
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/page.css">
+<link rel="stylesheet" href="/styles/home.css">
+<link rel="stylesheet" href="/styles/error.css">
+
+<!-- Applies the saved or system theme before first paint to avoid a flash. -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('gridly:theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+      if (theme === 'dark') document.querySelector('meta[name="theme-color"]').content = '#0b0d12';
+    } catch (e) { /* storage unavailable - light theme stands */ }
+  })();
+</script>
+</head>
+
+<body data-page="404">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div data-component="header">
+  <noscript>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/work.html">Work</a></li>
+        <li><a href="/process.html">Process</a></li>
+        <li><a href="/technologies.html">Technologies</a></li>
+        <li><a href="/insights.html">Insights</a></li>
+        <li><a href="/internship.html">Internship</a></li>
+        <li><a href="/contact.html">Start a Project</a></li>
+      </ul>
+    </nav>
+  </noscript>
+</div>
+
+<main id="main">
+  <section class="error-page">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container error-page__grid">
+
+      <div>
+        <p class="error-code">Error 404</p>
+        <h1 class="error-title">This page couldn't be found.</h1>
+        <p class="error-lead">
+          Looks like this page went offline. The link may be out of date, or the address might
+          have a typo in it.
+        </p>
+
+        <div class="error-actions">
+          <a class="btn btn--primary btn--lg" href="/">Back home</a>
+          <a class="btn btn--ghost btn--lg" href="/work.html">Explore our work</a>
+        </div>
+
+        <div class="error-links">
+          <h2 class="error-links__title">Try one of these instead</h2>
+          <ul class="error-links__list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/work.html">Work</a></li>
+            <li><a href="/process.html">Process</a></li>
+            <li><a href="/technologies.html">Technologies</a></li>
+            <li><a href="/insights.html">Insights</a></li>
+            <li><a href="/internship.html">Internship</a></li>
+            <li><a href="/verify/">Verify a certificate</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="broken-grid" aria-hidden="true">
+        <i></i><i></i><i></i>
+        <i></i><i></i><i></i>
+        <i></i><i></i><i></i>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<div data-component="footer"></div>
+
+<script type="module" src="/scripts/pages/static-page.js"></script>
+</body>
+</html>

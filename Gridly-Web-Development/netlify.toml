@@ -1,0 +1,120 @@
+# Gridly — Netlify configuration
+# Static site: no build step, no dependencies, no environment variables.
+#
+# Every redirect below points at a file that exists in this repository.
+# If you add a page, add its redirect here AND create the .html file.
+
+[build]
+  publish = "."
+  command = ""
+
+# ---------------------------------------------------------------------------
+# Clean URLs. Status 200 rewrites the file without changing the address bar,
+# so /about serves about.html and a refresh on /about still works.
+# ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/work"
+  to = "/work.html"
+  status = 200
+
+[[redirects]]
+  from = "/process"
+  to = "/process.html"
+  status = 200
+
+[[redirects]]
+  from = "/technologies"
+  to = "/technologies.html"
+  status = 200
+
+[[redirects]]
+  from = "/insights"
+  to = "/insights.html"
+  status = 200
+
+[[redirects]]
+  from = "/article"
+  to = "/article.html"
+  status = 200
+
+[[redirects]]
+  from = "/internship"
+  to = "/internship.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/faq"
+  to = "/faq.html"
+  status = 200
+
+[[redirects]]
+  from = "/certificate"
+  to = "/certificate.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
+# /verify/ is served from verify/index.html by Netlify's directory handling.
+# This entry only normalises the version without the trailing slash.
+[[redirects]]
+  from = "/verify"
+  to = "/verify/"
+  status = 301
+
+# ---------------------------------------------------------------------------
+# Catch-all 404. Must stay LAST — Netlify applies the first matching rule.
+# ---------------------------------------------------------------------------
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# ---------------------------------------------------------------------------
+# Security headers
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+  for = "/styles/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/scripts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"

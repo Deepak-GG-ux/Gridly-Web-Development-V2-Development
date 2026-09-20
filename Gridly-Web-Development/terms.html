@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Terms | Gridly</title>
+<meta name="description" content="Terms of use for the Gridly website, including the status of portfolio content and the scope of the certificate verification page.">
+<link rel="canonical" href="https://gridly.netlify.app/terms">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gridly">
+<meta property="og:title" content="Terms | Gridly">
+<meta property="og:description" content="Terms of use for the Gridly website, including the status of portfolio content and the scope of the certificate verification page.">
+<meta property="og:url" content="https://gridly.netlify.app/terms">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="theme-color" content="#f1f2f4">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/styles/tokens.css">
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/page.css">
+<link rel="stylesheet" href="/styles/home.css">
+
+<!-- Applies the saved or system theme before first paint to avoid a flash. -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('gridly:theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+      if (theme === 'dark') document.querySelector('meta[name="theme-color"]').content = '#0b0d12';
+    } catch (e) { /* storage unavailable - light theme stands */ }
+  })();
+</script>
+</head>
+
+<body data-page="terms">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div data-component="header">
+  <noscript>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/work.html">Work</a></li>
+        <li><a href="/process.html">Process</a></li>
+        <li><a href="/technologies.html">Technologies</a></li>
+        <li><a href="/insights.html">Insights</a></li>
+        <li><a href="/internship.html">Internship</a></li>
+        <li><a href="/contact.html">Start a Project</a></li>
+      </ul>
+    </nav>
+  </noscript>
+</div>
+
+<main id="main">
+  <section class="page-head">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-head__grid">
+        <div>
+          <p class="section-head__index">Legal</p>
+          <h1 class="page-head__title">Terms</h1>
+        </div>
+        <div>
+          <p class="lead page-head__lead">Terms of use for this website. This is a template for a demonstration project and is not legal advice.</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="terms-title">
+    <div class="container container--narrow">
+      <div class="notice">
+        <p>
+          <strong>Template document.</strong> These terms are a plain-language starting point for
+          a portfolio project. They have not been reviewed by a lawyer. Replace them with
+          reviewed terms before using this site commercially.
+        </p>
+      </div>
+
+      <div class="legal prose" style="margin-top: var(--s-7)">
+        <h2 id="terms-title">About this website</h2>
+        <p>
+          Gridly is a web development studio project created as a portfolio and internship
+          piece. The company, its services and its portfolio projects are presented for
+          demonstration. Portfolio entries are labelled as concept projects and are not client
+          work.
+        </p>
+
+        <h2>Accuracy of content</h2>
+        <p>
+          Content is provided as-is. Service descriptions, timelines and technical explanations
+          describe general working practice rather than a binding offer. Nothing on this site
+          forms a contract.
+        </p>
+
+        <h2>Certificate records</h2>
+        <p>
+          The verification page confirms internship records issued by Gridly for work completed
+          on the Gridly website project. It is not an accreditation body, a university or a
+          government verification service, and a verified result should not be read as any of
+          those things.
+        </p>
+
+        <h2>Intellectual property</h2>
+        <p>
+          The Gridly name, mark and written content on this site were created for this project.
+          The source code is available in the project repository for learning and portfolio
+          purposes.
+        </p>
+
+        <h2>External links</h2>
+        <p>
+          Links to external sites are provided for reference. Gridly does not control those
+          sites and is not responsible for their content.
+        </p>
+
+        <h2>Changes</h2>
+        <p>
+          These terms may be updated as the project develops. The current version is always the
+          one published here.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-component="footer"></div>
+
+<script type="module" src="/scripts/pages/faq.js"></script>
+</body>
+</html>

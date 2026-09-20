@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Selected Work — Concept Projects | Gridly</title>
+<meta name="description" content="Concept web design and development projects across restaurants, real estate, retail, education, construction and photography, each with a full case study.">
+<link rel="canonical" href="https://gridly.netlify.app/work">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gridly">
+<meta property="og:title" content="Selected Work — Concept Projects | Gridly">
+<meta property="og:description" content="Concept web design and development projects across restaurants, real estate, retail, education, construction and photography, each with a full case study.">
+<meta property="og:url" content="https://gridly.netlify.app/work">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="theme-color" content="#f1f2f4">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/styles/tokens.css">
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/page.css">
+<link rel="stylesheet" href="/styles/home.css">
+<link rel="stylesheet" href="/styles/work.css">
+
+<!-- Applies the saved or system theme before first paint to avoid a flash. -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('gridly:theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+      if (theme === 'dark') document.querySelector('meta[name="theme-color"]').content = '#0b0d12';
+    } catch (e) { /* storage unavailable - light theme stands */ }
+  })();
+</script>
+</head>
+
+<body data-page="work">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div data-component="header">
+  <noscript>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/work.html">Work</a></li>
+        <li><a href="/process.html">Process</a></li>
+        <li><a href="/technologies.html">Technologies</a></li>
+        <li><a href="/insights.html">Insights</a></li>
+        <li><a href="/internship.html">Internship</a></li>
+        <li><a href="/contact.html">Start a Project</a></li>
+      </ul>
+    </nav>
+  </noscript>
+</div>
+
+<main id="main">
+  <section class="page-head">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-head__grid">
+        <div>
+          <p class="section-head__index">Work</p>
+          <h1 class="page-head__title">Selected work</h1>
+        </div>
+        <div>
+          <p class="lead page-head__lead">Concept projects built to demonstrate capability across industries and project types. Each one opens into a full case study covering the challenge, approach, solution and technology.</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="work-title">
+    <div class="container">
+      <h2 class="visually-hidden" id="work-title">Project archive</h2>
+
+      <div class="notice notice--info" style="margin-bottom: var(--s-6)">
+        <p>
+          <strong>Concept projects.</strong> Every project below is a self-directed build created
+          to demonstrate capability. None of them are client engagements, and no client names,
+          results or performance metrics are claimed anywhere on this site.
+        </p>
+      </div>
+
+      <div class="work-bar">
+        <div class="filters" data-render="work-filters" role="group" aria-label="Filter projects by type"></div>
+        <p class="work-bar__count" data-work-count aria-live="polite">6 projects</p>
+      </div>
+
+      <div class="work-grid" data-render="work-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="approach-title">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">Method</p>
+        <h2 class="section-head__title" id="approach-title">How these were built</h2>
+        <p class="section-head__lead">
+          Each concept project starts from a real constraint rather than a visual idea.
+        </p>
+      </div>
+
+      <div class="card-grid card-grid--3">
+        <article class="card"><h3 class="card-title">A problem, not a palette</h3><p class="muted">Each concept begins with a specific difficulty: a menu nobody updates, a filter that loses your place, a gallery too heavy to load. The design answers that.</p></article>
+        <article class="card"><h3 class="card-title">Data before layout</h3><p class="muted">The content model is defined first. If the data shape is wrong, no amount of layout work rescues the page.</p></article>
+        <article class="card"><h3 class="card-title">Narrow screen first</h3><p class="muted">Every layout is resolved at 320 pixels before it is widened, which forces a real content hierarchy rather than a collapsed one.</p></article>
+        <article class="card"><h3 class="card-title">Accessible interactions</h3><p class="muted">Filters, modals and galleries are built against the published ARIA patterns and operated by keyboard before they are considered done.</p></article>
+        <article class="card"><h3 class="card-title">Documented decisions</h3><p class="muted">Each case study records why a decision was made, which is more useful later than a screenshot of the result.</p></article>
+        <article class="card"><h3 class="card-title">Honest outcomes</h3><p class="muted">Outcomes are described as demonstration results. No traffic, revenue or conversion figures are claimed, because there are none to claim.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="section section--tight cta-band is-night" aria-labelledby="cta-title">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container cta-band__inner">
+      <div>
+        <h2 class="cta-band__title" id="cta-title">Want something like this for your business?</h2>
+      </div>
+      <div>
+        <p class="lead" style="margin-bottom: var(--s-5)">Tell us what the project needs to achieve. We will come back with an approach, a scope and an honest view of what it takes.</p>
+        <div class="cta-band__actions">
+          <a class="btn btn--primary btn--lg" href="/contact.html">Start a project</a>
+          <a class="btn btn--ghost btn--lg" href="/process.html">See the process</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-component="footer"></div>
+
+<script type="module" src="/scripts/pages/work.js"></script>
+</body>
+</html>

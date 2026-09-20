@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Insights — Web Development and Design Articles | Gridly</title>
+<meta name="description" content="Gridly editorial articles on responsive design, website performance, technical SEO, planning a business website and web development practice.">
+<link rel="canonical" href="https://gridly.netlify.app/insights">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gridly">
+<meta property="og:title" content="Insights — Web Development and Design Articles | Gridly">
+<meta property="og:description" content="Gridly editorial articles on responsive design, website performance, technical SEO, planning a business website and web development practice.">
+<meta property="og:url" content="https://gridly.netlify.app/insights">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="theme-color" content="#f1f2f4">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/styles/tokens.css">
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/page.css">
+<link rel="stylesheet" href="/styles/home.css">
+
+<!-- Applies the saved or system theme before first paint to avoid a flash. -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('gridly:theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+      if (theme === 'dark') document.querySelector('meta[name="theme-color"]').content = '#0b0d12';
+    } catch (e) { /* storage unavailable - light theme stands */ }
+  })();
+</script>
+</head>
+
+<body data-page="insights">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div data-component="header">
+  <noscript>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/work.html">Work</a></li>
+        <li><a href="/process.html">Process</a></li>
+        <li><a href="/technologies.html">Technologies</a></li>
+        <li><a href="/insights.html">Insights</a></li>
+        <li><a href="/internship.html">Internship</a></li>
+        <li><a href="/contact.html">Start a Project</a></li>
+      </ul>
+    </nav>
+  </noscript>
+</div>
+
+<main id="main">
+  <section class="page-head">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-head__grid">
+        <div>
+          <p class="section-head__index">Insights</p>
+          <h1 class="page-head__title">Gridly Insights</h1>
+        </div>
+        <div>
+          <p class="lead page-head__lead">Editorial articles on web development, design, performance and the practical side of running a website project. Written by the Gridly team for this project.</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="posts-title">
+    <div class="container">
+      <h2 class="visually-hidden" id="posts-title">Articles</h2>
+
+      <div class="notice notice--info" style="margin-bottom: var(--s-6)">
+        <p>
+          <strong>Gridly editorial.</strong> These articles describe working practice. They are
+          written for this project and contain no cited research, survey data or statistics.
+        </p>
+      </div>
+
+      <div class="posts-bar">
+        <div class="filters" data-render="post-filters" role="group" aria-label="Filter articles by category"></div>
+
+        <div class="search-field">
+          <span class="search-field__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+          </span>
+          <label class="visually-hidden" for="post-search">Search articles</label>
+          <input class="input" id="post-search" type="search" placeholder="Search articles" data-post-search autocomplete="off">
+        </div>
+      </div>
+
+      <p class="work-bar__count" data-post-count aria-live="polite" style="margin-bottom: var(--s-5)">6 articles</p>
+
+      <div class="posts-grid" data-render="posts"></div>
+    </div>
+  </section>
+  <section class="section section--tight cta-band is-night" aria-labelledby="cta-title">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container cta-band__inner">
+      <div>
+        <h2 class="cta-band__title" id="cta-title">Have a question these do not answer?</h2>
+      </div>
+      <div>
+        <p class="lead" style="margin-bottom: var(--s-5)">The FAQ covers how projects start, how long they take and what maintenance involves.</p>
+        <div class="cta-band__actions">
+          <a class="btn btn--primary btn--lg" href="/faq.html">Read the FAQ</a>
+          <a class="btn btn--ghost btn--lg" href="/contact.html">Ask directly</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-component="footer"></div>
+
+<script type="module" src="/scripts/pages/insights.js"></script>
+</body>
+</html>

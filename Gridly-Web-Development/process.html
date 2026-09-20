@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Our Development Process — Seven Stages | Gridly</title>
+<meta name="description" content="How a Gridly project runs: discovery, planning, design, development, testing, launch and ongoing improvement, with defined outputs at each stage.">
+<link rel="canonical" href="https://gridly.netlify.app/process">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gridly">
+<meta property="og:title" content="Our Development Process — Seven Stages | Gridly">
+<meta property="og:description" content="How a Gridly project runs: discovery, planning, design, development, testing, launch and ongoing improvement, with defined outputs at each stage.">
+<meta property="og:url" content="https://gridly.netlify.app/process">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="theme-color" content="#f1f2f4">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="/styles/tokens.css">
+<link rel="stylesheet" href="/styles/base.css">
+<link rel="stylesheet" href="/styles/components.css">
+<link rel="stylesheet" href="/styles/layout.css">
+<link rel="stylesheet" href="/styles/page.css">
+<link rel="stylesheet" href="/styles/home.css">
+
+<!-- Applies the saved or system theme before first paint to avoid a flash. -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('gridly:theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+      if (theme === 'dark') document.querySelector('meta[name="theme-color"]').content = '#0b0d12';
+    } catch (e) { /* storage unavailable - light theme stands */ }
+  })();
+</script>
+</head>
+
+<body data-page="process">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div data-component="header">
+  <noscript>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/work.html">Work</a></li>
+        <li><a href="/process.html">Process</a></li>
+        <li><a href="/technologies.html">Technologies</a></li>
+        <li><a href="/insights.html">Insights</a></li>
+        <li><a href="/internship.html">Internship</a></li>
+        <li><a href="/contact.html">Start a Project</a></li>
+      </ul>
+    </nav>
+  </noscript>
+</div>
+
+<main id="main">
+  <section class="page-head">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-head__grid">
+        <div>
+          <p class="section-head__index">Process</p>
+          <h1 class="page-head__title">How we work</h1>
+        </div>
+        <div>
+          <p class="lead page-head__lead">Seven stages from the first conversation to ongoing improvement. Each stage has a defined output, so you always know what you are receiving and when.</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="stages-title">
+    <div class="container">
+      <h2 class="visually-hidden" id="stages-title">Development stages</h2>
+      <div class="process" data-render="process"></div>
+    </div>
+  </section>
+
+  <section class="section is-night" aria-labelledby="principles-title">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">Principles</p>
+        <h2 class="section-head__title" id="principles-title">What guides each stage</h2>
+        <p class="section-head__lead">
+          The process is a sequence of steps. These are the principles that decide how each
+          step is carried out.
+        </p>
+      </div>
+
+      <ol class="principles" data-render="principles"></ol>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="expect-title">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <p class="section-head__index">Working together</p>
+        <h2 class="section-head__title" id="expect-title">What we need from you</h2>
+        <p class="section-head__lead">
+          Projects run late for predictable reasons. Three of them are within your control.
+        </p>
+      </div>
+
+      <div class="card-grid card-grid--3">
+        <article class="card"><h3 class="card-title">Content, early</h3><p class="muted">Text and images are the most common cause of delay. Development can proceed against a structure, but nothing launches without the words.</p></article>
+        <article class="card"><h3 class="card-title">One decision maker</h3><p class="muted">Feedback gathered from several people and passed on unfiltered tends to contradict itself. One person consolidating it keeps the project moving.</p></article>
+        <article class="card"><h3 class="card-title">Account access</h3><p class="muted">Domain registrar, DNS and any existing hosting access should be located before launch week rather than during it.</p></article>
+      </div>
+
+      <div class="table-wrap" style="margin-top: var(--s-8)">
+        <table class="table">
+          <caption class="visually-hidden">Typical responsibilities by stage</caption>
+          <thead>
+            <tr><th scope="col">Stage</th><th scope="col">Gridly provides</th><th scope="col">You provide</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Discover</th><td>Questions, requirement notes, success criteria</td><td>Business context and goals</td></tr>
+            <tr><th scope="row">Plan</th><td>Sitemap, scope document, technology decisions</td><td>Approval of scope and priorities</td></tr>
+            <tr><th scope="row">Design</th><td>Wireframes, design tokens, component library</td><td>Consolidated feedback, brand assets if any</td></tr>
+            <tr><th scope="row">Develop</th><td>Built components, data structures, integrations</td><td>Final copy and images</td></tr>
+            <tr><th scope="row">Test</th><td>Responsive, keyboard and browser testing, bug log</td><td>Review on your own devices</td></tr>
+            <tr><th scope="row">Launch</th><td>Deployment, redirects, headers, metadata</td><td>Domain and DNS access</td></tr>
+            <tr><th scope="row">Improve</th><td>Monitoring, fixes, improvement backlog</td><td>Feedback from real usage</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section class="section section--tight cta-band is-night" aria-labelledby="cta-title">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="container cta-band__inner">
+      <div>
+        <h2 class="cta-band__title" id="cta-title">Ready to start at stage one?</h2>
+      </div>
+      <div>
+        <p class="lead" style="margin-bottom: var(--s-5)">Tell us what the project needs to achieve. We will come back with an approach, a scope and an honest view of what it takes.</p>
+        <div class="cta-band__actions">
+          <a class="btn btn--primary btn--lg" href="/contact.html">Start a project</a>
+          <a class="btn btn--ghost btn--lg" href="/faq.html">Read the FAQ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-component="footer"></div>
+
+<script type="module" src="/scripts/pages/process.js"></script>
+</body>
+</html>

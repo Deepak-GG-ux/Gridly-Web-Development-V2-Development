@@ -1,0 +1,378 @@
+/* ==========================================================================
+   GRIDLY — Certificate verification and certificate record
+   ========================================================================== */
+
+/* --- Verification lookup ---------------------------------------------------- */
+.verify-layout { display: grid; gap: clamp(2rem, 5vw, 3.5rem); }
+
+@media (min-width: 980px) {
+  .verify-layout { grid-template-columns: minmax(0, 360px) minmax(0, 1fr); align-items: start; }
+  .verify-layout > :first-child { position: sticky; top: 6rem; }
+}
+
+.verify-form {
+  display: grid;
+  gap: var(--s-4);
+  padding: var(--s-6);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--card);
+}
+
+.verify-form .input {
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.verify-form .input::placeholder { text-transform: none; letter-spacing: 0; }
+
+.verify-hint {
+  font-size: var(--fs-xs);
+  color: var(--fg-muted);
+  margin: 0;
+}
+
+.verify-hint code {
+  background: var(--card-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xs);
+  padding: 1px 5px;
+}
+
+.verify-sample {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-size: var(--fs-xs);
+  color: var(--accent);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font-family: var(--font-body);
+  text-align: left;
+}
+
+.verify-sample:hover { text-decoration: underline; }
+
+/* --- Result states ------------------------------------------------------------- */
+.verify-result {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--card);
+}
+
+.verify-result__icon {
+  display: grid;
+  place-items: center;
+  width: 48px; height: 48px;
+  border-radius: var(--r-md);
+  background: var(--card-alt);
+  color: var(--fg-muted);
+  margin-bottom: var(--s-4);
+}
+
+.verify-result--invalid { border-color: var(--warn); }
+.verify-result--invalid .verify-result__icon { background: var(--warn-soft); color: var(--warn); }
+
+.verify-result--notfound { border-color: var(--err); }
+.verify-result--notfound .verify-result__icon { background: var(--err-soft); color: var(--err); }
+
+.verify-result--ok { border-color: var(--ok); padding-top: 0; }
+
+.verify-result__title { font-size: clamp(1.25rem, 2.6vw, 1.7rem); margin-bottom: var(--s-3); }
+.verify-result__body { color: var(--fg-2); font-size: var(--fs-sm); max-width: 62ch; }
+.verify-result__body + .verify-result__body { margin-top: var(--s-3); }
+
+.verify-result__body code,
+.verify-result code {
+  background: var(--card-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xs);
+  padding: 1px 5px;
+  font-size: 0.85em;
+  overflow-wrap: anywhere;
+}
+
+.verify-result__banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-4);
+  padding: var(--s-5) 0;
+  margin-bottom: var(--s-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.verify-result__banner .badge { margin-left: auto; }
+
+.verify-result__check {
+  display: grid;
+  place-items: center;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--ok);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.verify-result__banner .verify-result__title { margin-bottom: 2px; }
+.verify-result__sub { font-size: var(--fs-sm); color: var(--fg-muted); margin: 0; }
+
+.verify-result__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin-top: var(--s-6);
+}
+
+.verify__scope {
+  margin-top: var(--s-5);
+  padding-top: var(--s-4);
+  border-top: 1px dashed var(--border-strong);
+  font-size: var(--fs-xs);
+  color: var(--fg-muted);
+  max-width: 68ch;
+}
+
+/* --- Certificate preview card (internship page) --------------------------------------- */
+.cert-preview {
+  display: grid;
+  gap: var(--s-4);
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-lg);
+  background: var(--card);
+  box-shadow: var(--shadow-md);
+}
+
+.cert-preview__head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-3); }
+
+.cert-preview__id {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+  margin: 0;
+}
+
+.cert-preview__name { font-size: clamp(1.5rem, 3.4vw, 2.1rem); margin: 0; }
+.cert-preview__role { color: var(--fg-muted); font-size: var(--fs-sm); margin: 0; }
+
+.cert-preview__fields { margin: 0; display: grid; gap: var(--s-4); }
+
+@media (min-width: 620px) { .cert-preview__fields { grid-template-columns: repeat(2, 1fr); } }
+
+.cert-preview__fields dt {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--ls-mono);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: 2px;
+}
+
+.cert-preview__fields dd { margin: 0; font-size: var(--fs-sm); font-weight: 500; }
+
+.cert-preview__actions { display: flex; flex-wrap: wrap; gap: var(--s-3); }
+
+.cert-preview__scope {
+  font-size: var(--fs-xs);
+  color: var(--fg-muted);
+  margin: 0;
+  padding-top: var(--s-4);
+  border-top: 1px dashed var(--border-strong);
+}
+
+/* --- Printable certificate record ------------------------------------------------------- */
+.cert-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  margin-bottom: var(--s-6);
+}
+
+.cert-toolbar__actions { display: flex; flex-wrap: wrap; gap: var(--s-3); }
+.cert-toolbar .link-arrow svg { transform: rotate(180deg); }
+
+.cert {
+  position: relative;
+  max-width: 820px;
+  margin-inline: auto;
+  padding: clamp(1.75rem, 5vw, 3.5rem);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-md);
+  background: var(--card);
+  box-shadow: var(--shadow-md);
+}
+
+/* Corner rules instead of a decorative border — no seals or emblems. */
+.cert::before, .cert::after {
+  content: '';
+  position: absolute;
+  width: 42px; height: 42px;
+  border: 2px solid var(--accent);
+  pointer-events: none;
+}
+
+.cert::before { top: 14px; left: 14px; border-right: 0; border-bottom: 0; }
+.cert::after { bottom: 14px; right: 14px; border-left: 0; border-top: 0; }
+
+.cert__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  padding-bottom: var(--s-5);
+  border-bottom: 1px solid var(--border);
+}
+
+.cert__brand { display: flex; align-items: center; gap: var(--s-3); color: var(--fg); }
+
+.cert__brandname {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+}
+
+.cert__kicker {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--ls-mono);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin: 0;
+}
+
+.cert__body { padding-block: clamp(1.75rem, 4vw, 2.75rem); }
+
+.cert__intro { font-size: var(--fs-sm); color: var(--fg-muted); margin-bottom: var(--s-3); }
+
+.cert__name {
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-bottom: var(--s-4);
+}
+
+.cert__statement {
+  font-size: var(--fs-lead);
+  color: var(--fg-2);
+  max-width: 60ch;
+  margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.cert__fields {
+  display: grid;
+  gap: var(--s-4);
+  margin: 0;
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--border);
+}
+
+@media (min-width: 640px) { .cert__fields { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .cert__fields { grid-template-columns: repeat(3, 1fr); } }
+
+.cert__field dt {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--ls-mono);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: 3px;
+}
+
+.cert__field dd { margin: 0; font-size: var(--fs-sm); font-weight: 500; overflow-wrap: anywhere; }
+
+.cert__foot {
+  display: grid;
+  gap: var(--s-6);
+  padding-top: clamp(1.75rem, 4vw, 2.5rem);
+  border-top: 1px solid var(--border);
+}
+
+@media (min-width: 680px) {
+  .cert__foot { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: end; }
+}
+
+.cert__signline {
+  display: block;
+  width: min(240px, 100%);
+  height: 1px;
+  background: var(--border-strong);
+  margin-bottom: var(--s-3);
+}
+
+.cert__signname { font-weight: 600; margin: 0; }
+.cert__signrole { font-size: var(--fs-sm); color: var(--fg-muted); margin: 0; }
+
+.cert__verify { text-align: left; }
+
+@media (min-width: 680px) { .cert__verify { text-align: right; } }
+
+.cert__verifylabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--ls-mono);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: var(--s-2);
+}
+
+.cert__verifyurl { font-size: var(--fs-xs); color: var(--fg-2); margin: 0 0 2px; overflow-wrap: anywhere; }
+
+.cert__verifyid {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.cert__scope {
+  margin-top: var(--s-5);
+  padding-top: var(--s-4);
+  border-top: 1px dashed var(--border-strong);
+  font-size: var(--fs-xs);
+  color: var(--fg-muted);
+  max-width: none;
+}
+
+/* --- Print: A4-friendly, no site chrome --------------------------------------------------- */
+@media print {
+  @page { size: A4 portrait; margin: 14mm; }
+
+  html, body { background: #fff !important; color: #000 !important; }
+
+  .site-header, .site-footer, .cert-toolbar, .scroll-progress, .skip-link, .drawer {
+    display: none !important;
+  }
+
+  .page-head { display: none !important; }
+
+  main, .section { padding: 0 !important; }
+
+  .cert {
+    max-width: none;
+    border: 1px solid #000;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 12mm;
+    break-inside: avoid;
+    background: #fff;
+  }
+
+  .cert::before, .cert::after { border-color: #000; }
+
+  .cert__name { font-size: 28pt; }
+  .cert__statement { font-size: 11pt; }
+  .cert__field dd, .cert__signname { font-size: 10pt; }
+  .cert__kicker, .cert__field dt, .cert__verifylabel { font-size: 7.5pt; }
+  .cert__scope { font-size: 7.5pt; color: #333; }
+}
